@@ -47,6 +47,11 @@ public class FirstTestTest {
         HashMap<String, Integer> tmp = new HashMap<String, Integer>();
         Integer commentCount = tmp.get("Ushakov");
 
+        /*
+        article.put("Ushakov", 30);
+        Integer commentCount = article.get("Ushakov");
+        */
+
         //poisk po spisku
         List<String> titles = new ArrayList<String>();
         List<Integer> comentsCount = new ArrayList<Integer>();
