@@ -1,3 +1,4 @@
+import PageObjectTest.Pages.BaseFunctions;
 import firstTest.FirstTestTest;
 import jdk.nashorn.internal.runtime.options.LoggingOption;
 import org.apache.logging.log4j.Logger;
@@ -21,7 +22,7 @@ public class DelfiTest {
 //    private static final By INSIDE_TITLE = driver.findElement(By.xpath("./("");
     String TITLE;
     String TITLE_COUNT;
-    private static final Logger LOGGER = LogManager.getLogger(FirstTestTest.class);
+    private static final Logger LOGGER = LogManager.getLogger(DelfiTest.class);
 
 //    import java.unit.ArticeList;
 //    import java.unit.List;
@@ -88,12 +89,16 @@ sozdat peremennuju kotoroj mozhno budet prisvoit nazvanie statji i sravnit comme
         for(int i=0;i<5;i++){        //narashivaet masiv do 5 (t.k kolichstvo statej nas ne interesuet)
 
             TITLE = driver.findElements (By.xpath ("(//a[@class='top2012-title'])")).get (i).getText ();
+            TITLE_COUNT = driver.findElements(By.xpath ("(//a[@class='comment-count'])")).get (i).getText();
             article_title.add(TITLE);                  //zapihivaem v masiv nazvanie statji
-            System.out.println("Nomer article : "+i+" article Title : "+ article_title);
+//            System.out.println("Nomer article : "+i+" article Title : "+ article_title);
+
+
+
 //            System.out.println(art_icle_count.get(i).getText());
         }
-        //Logger.info ("Vivodim konechnij massiv ");   //logger ne rabotaet ???
-        System.out.println("Vivodim konechnij massiv ");
+        LOGGER.info ("Vivodim konechnij massiv ");
+//        System.out.println("Vivodim konechnij massiv ");
         System.out.println("article Titles : "+ article_title);
 
 /*
